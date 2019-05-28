@@ -18,19 +18,18 @@ const styles = (theme: Theme) =>
       width: "100%",
       marginTop: 10,
       overflowX: "auto",
-      border: '3px solid #282c34'
+      border: "3px solid #282c34"
     },
     table: {
-      minWidth: 700,
-
+      minWidth: 700
     },
     headerFont: {
       fontSize: "calc(10px + 2vmin)",
       fontWeight: "bold"
     },
     headerRow: {
-      borderBottom: '3px solid #282c34'
-    },
+      borderBottom: "3px solid #282c34"
+    }
   })
 
 interface IndividualStat {

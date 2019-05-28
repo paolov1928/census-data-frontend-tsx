@@ -1,16 +1,10 @@
 import * as React from "react"
-
-import { connect } from 'react-redux';
-
-import { IAppState } from '../store/Store';
-
-import { ICensusStat } from '../reducers/censusStatReducer';
-import { getAllCensusStats } from '../actions/CensusStatActions';
+import { connect } from "react-redux"
+import { getAllCensusStats } from "../actions/CensusStatActions"
 // Create the containers interface
 interface IProps {
-  getAllCensusStats: any;
+  getAllCensusStats: any
 }
-
 
 class DropDown extends React.Component<IProps> {
   selection = [
@@ -43,10 +37,13 @@ class DropDown extends React.Component<IProps> {
   }
 }
 
-// Grab the censusStats from the store and make them available on props
+// Made sure that the dispatch is available to the component
+// useful: https://blog.bam.tech/developper-news/4-ways-to-dispatch-actions-with-redux
 const mapDispatchToProps = {
-  getAllCensusStats,
-};
+  getAllCensusStats
+}
 
-
-export default connect(null, mapDispatchToProps)(DropDown);
+export default connect(
+  null,
+  mapDispatchToProps
+)(DropDown)
